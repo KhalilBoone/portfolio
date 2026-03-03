@@ -49,8 +49,8 @@ export default function HomePage() {
         <span>💡</span>
         <span>
           Senior Product Owner with 7+ years translating complex user needs into product decisions across
-          fintech, financial services, enterprise SaaS, and consumer platforms. Deep background in UX strategy, design
-          systems, and stakeholder alignment — with hands-on technical fluency (React, Firebase, Supabase,
+          fintech, financial services, enterprise SaaS and consumer platforms. I have a deep background in UX strategy, design
+          systems, and stakeholder alignment with hands-on technical fluency (React, Vercel, Firebase, Supabase, Python, R, SQL and
           AI integrations) that closes the gap between product vision and engineering execution.
         </span>
       </div>
