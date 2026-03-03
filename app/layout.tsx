@@ -4,11 +4,11 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import { LayoutShell } from '@/components/LayoutShell';
 
 export const metadata: Metadata = {
-  title: 'Clarence Boone — AI Product Manager',
+  title: 'Khalîl Boone — AI Product Manager',
   description:
     'PM portfolio: case studies, product teardowns, and AI product work from a designer-turned-product-leader.',
   openGraph: {
-    title: 'Clarence Boone — AI Product Manager',
+    title: 'Khalîl Boone — AI Product Manager',
     description: 'Case studies, product teardowns, and AI product work.',
     type: 'website',
   },
