@@ -848,9 +848,13 @@ button:focus-visible {
 
 .ch-quote {
   font-size: 12px;
-  color: var(--muted);
+  color: #6e6d6b;
   line-height: 1.55;
   font-style: italic;
+}
+
+.dark .ch-quote {
+  color: #909090;
 }
 
 @media (max-width: 640px) {
