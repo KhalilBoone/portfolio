@@ -34,63 +34,60 @@ export const cases: CaseStudy[] = [
     status: "Published",
     statusColor: "#4caf85",
     preview:
-      "Led product development of a design system adopted across 41 enterprise products, reducing design iteration cycles by 30% and aligning 3 design teams with engineering and product leadership.",
+      "Led product development of a design system adopted across 41 product websites, reducing design iteration cycles by 30% and aligning 3 design teams with engineering and product leadership.",
     coverPhoto: {
-      src: "/images/cases/blackstone/cover.png",
-      alt: "Blackstone Design System in Storybook",
+      src: "/images/bx_guidelines.png",
+      alt: "Blackstone Design System in React",
       caption:
-        "The component library in Storybook — 200+ components across 41 product sites, documented with usage guidelines and accessibility annotations.",
+        "The React component library, with 30+ components across 41 product sites, documented with usage guidelines and accessibility annotations.",
       suggestion:
-        "📸 PHOTO SUGGESTION: Screenshot of your Storybook component library zoomed out to show the full left-nav category structure (Typography, Buttons, Forms, etc.). The goal is breadth — show it's a real system, not a handful of components. Blur any sensitive Blackstone branding if needed.",
+        "",
     },
     sections: [
       {
         heading: "The Problem",
-        body: "Blackstone's product suite had grown to 41 enterprise sites with no shared design language. Each team rebuilt components from scratch, creating visual inconsistency, slowing shipping velocity, and generating constant rework across the organization.",
+        body: "Blackstone's product suite had grown to 41 enterprise sites with no shared design language. Each designer and engineer rebuilt components from scratch, creating visual inconsistency, slowing shipping velocity, and generating constant rework across the organization.",
         photos: [
           {
-            src: "/images/cases/blackstone/before-audit.png",
-            alt: "UI audit showing inconsistency across products",
+            src: "/images/improved_components.png",
+            alt: "UI audit showing inconsistency across product websites",
             caption:
-              "A UI audit comparing button styles, type scales, and color usage across 6 product sites before the design system. Each team had diverged significantly.",
-            suggestion:
-              "📸 PHOTO SUGGESTION: Side-by-side screenshots of 4–6 different Blackstone product UIs — place them in a grid in Figma and draw red annotation boxes around inconsistencies (different button radii, mismatched colors, varied type sizes). This is your 'before' state. Blur any confidential data.",
+              "A UI audit comparing button styles, type scales, and color usage across 24 product websites before the design system.",
+            suggestion: "",
           },
         ],
       },
-      {
-        heading: "My Role",
-        body: "I stepped into the intersection of design, product, and engineering — owning the design system as a product. I managed a team of 3 designers and served as the primary bridge between design leadership, product managers, and engineering squads across the organization.",
-        photos: [
-          {
-            src: "/images/cases/blackstone/team-structure.png",
-            alt: "Design system team structure",
-            caption:
-              "How the design system team interfaced with product squads — a hub-and-spoke model with embedded system contributors in each squad.",
-            suggestion:
-              "📸 PHOTO SUGGESTION: Create a simple org diagram in FigJam showing the design system team at the center and product squads around it. Even a photo of a whiteboard sketch from an early planning session is more authentic than a polished org chart. Shows real process.",
-          },
-        ],
-      },
+      // {
+      //   heading: "My Role",
+      //   body: "I stepped into the intersection of design, product, and engineering — owning the design system as a product owner. I managed a team of 3 designers and served as the primary bridge between design leadership, business stakeholders and engineering squads across the organization.",
+      //   photos: [
+      //     {
+      //       src: "/images/cases/blackstone/team-structure.png",
+      //       alt: "Design system team structure",
+      //       caption:
+      //         "How the design system team interfaced with product squads — a hub-and-spoke model with embedded system contributors in each squad.",
+      //       suggestion:
+      //         "📸 PHOTO SUGGESTION: Create a simple org diagram in FigJam showing the design system team at the center and product squads around it. Even a photo of a whiteboard sketch from an early planning session is more authentic than a polished org chart. Shows real process.",
+      //     },
+      //   ],
+      // },
       {
         heading: "Token Architecture",
         body: "We adopted a three-tier token architecture — primitive values mapped to semantic tokens mapped to component-level tokens — enabling per-brand theming without forking the system. Tokens were version-controlled and published via GitHub CI/CD pipelines.",
         photos: [
           {
-            src: "/images/cases/blackstone/token-architecture.png",
+            src: "/images/bx_spacing.png",
             alt: "Design token hierarchy: primitive → semantic → component",
             caption:
               "The three-tier token model. Primitive tokens define raw values; semantic tokens define intent; component tokens define usage. Brand themes swap the primitive layer without touching components.",
-            suggestion:
-              "📸 PHOTO SUGGESTION: Build a clean diagram in Figma showing the three tiers with examples: e.g., `--color-blue-500` (primitive) → `--color-interactive` (semantic) → `--button-bg` (component). This is your most technical slide — it demonstrates systems thinking clearly.",
+            suggestion: "",          
           },
           {
-            src: "/images/cases/blackstone/storybook-docs.png",
-            alt: "Storybook component documentation",
+            src: "/images/spacing_examples.png",
+            alt: "React component documentation",
             caption:
-              "Component documentation in Storybook — each component ships with usage guidelines, prop tables, and do/don't examples.",
-            suggestion:
-              "📸 PHOTO SUGGESTION: Storybook screenshot showing a single component's story page with multiple states visible (default, hover, disabled, error). Ideally show the Docs tab, not just the Canvas, so the documentation aspect is visible. This proves rigor.",
+              "Component documentation in React, with each component ships with usage guidelines, prop tables, and do/don't examples.",
+            suggestion: "",
           },
         ],
       },
@@ -99,12 +96,11 @@ export const cases: CaseStudy[] = [
         body: "30% reduction in design iteration cycles. 41 enterprise products aligned on a single shared system. Measurably faster feature shipping velocity across product teams, with newly onboarded engineers productive in the design system within their first week.",
         photos: [
           {
-            src: "/images/cases/blackstone/after-consistency.png",
+            src: "/images/bx_product-pages.png",
             alt: "After: visual consistency across products",
             caption:
-              "The same 6 products from the audit — now visually consistent, using shared components and tokens. Before/after is the most powerful proof of system impact.",
-            suggestion:
-              "📸 PHOTO SUGGESTION: Recreate the same side-by-side grid from your 'before' audit, now showing the consistent post-system state. Same layout, same red annotation boxes — but now green checkmarks instead. The visual contrast tells the story instantly.",
+              "The same 41 product websites from the audit — now visually consistent, using shared components and tokens. Before/after is the most powerful proof of system impact.",
+            suggestion: "",
           },
         ],
       },
@@ -121,12 +117,12 @@ export const cases: CaseStudy[] = [
     preview:
       "Built the operational infrastructure that coordinated 8+ vendor relationships across PLM systems and Airtable — designing the data architecture, workflow automation, and cross-functional tracking systems that kept high-velocity product timelines on schedule.",
     coverPhoto: {
-      src: "/images/cases/netflix/cover.png",
+      src: "/images/overview.png",
       alt: "Netflix product operations system overview",
       caption:
         "The Airtable operational system of record — a single source of truth for 8+ vendor relationships, surfacing blockers before they hit the critical path.",
       suggestion:
-        "📸 PHOTO SUGGESTION: Your Airtable base open to a well-structured grid or gallery view showing vendor records, status columns, and linked tables. This is your cover image — it should immediately read as 'someone built a real system here', not just a filled-in template. Blur any proprietary product names.",
+        "",
     },
     sections: [
       {
@@ -134,49 +130,49 @@ export const cases: CaseStudy[] = [
         body: "Coordinating 8+ vendor relationships across a high-velocity product pipeline had no single source of truth. Status lived in email threads and siloed spreadsheets — blockers surfaced too late, and cross-functional teams were constantly misaligned on timelines and deliverables.",
         photos: [
           {
-            src: "/images/cases/netflix/before-fragmentation.png",
+            src: "/images/product dev.png",
             alt: "Fragmented before state: siloed spreadsheets and emails",
             caption:
               "The before state: vendor status scattered across disconnected spreadsheets and email threads, with no shared visibility across design, production, and retail teams.",
             suggestion:
-              "📸 PHOTO SUGGESTION: A visual showing fragmentation — multiple open spreadsheet tabs, or a diagram you build in Figma showing siloed information flows between teams. Annotate with red boxes labeled 'No visibility', 'Delayed escalation', 'Duplicate effort'. The messier this looks, the better the contrast with your solution.",
+              "",
           },
         ],
       },
-      {
-        heading: "PLM System Management",
-        body: "Managed end-to-end product workflows inside PLM (Product Lifecycle Management) software — configuring product records, maintaining data integrity across vendor submissions, and ensuring specification accuracy from initial brief through final approval. Served as the operational bridge between internal stakeholders and external manufacturing partners navigating the system.",
-        photos: [
-          {
-            src: "/images/cases/netflix/plm-workflow.png",
-            alt: "PLM system workflow and product record management",
-            caption:
-              "PLM workflow stages owned end-to-end: brief → vendor submission → review → approval → production handoff. Each stage gated on data integrity checks.",
-            suggestion:
-              "📸 PHOTO SUGGESTION: Screenshot of the PLM system (Centric, Arena, Backbone, or whichever you used) showing a product record or workflow status board. Annotate the stages you owned with blue brackets or labels. If the system is confidential, rebuild the workflow as a clean diagram in Figma — the stages and gates matter more than the specific UI.",
-          },
-        ],
-      },
+      // {
+      //   heading: "PLM System Management",
+      //   body: "Managed end-to-end product workflows inside PLM (Product Lifecycle Management) software — configuring product records, maintaining data integrity across vendor submissions, and ensuring specification accuracy from initial brief through final approval. Served as the operational bridge between internal stakeholders and external manufacturing partners navigating the system.",
+      //   photos: [
+      //     {
+      //       src: "/images/cases/netflix/plm-workflow.png",
+      //       alt: "PLM system workflow and product record management",
+      //       caption:
+      //         "PLM workflow stages owned end-to-end: brief → vendor submission → review → approval → production handoff. Each stage gated on data integrity checks.",
+      //       suggestion:
+      //         "📸 PHOTO SUGGESTION: Screenshot of the PLM system (Centric, Arena, Backbone, or whichever you used) showing a product record or workflow status board. Annotate the stages you owned with blue brackets or labels. If the system is confidential, rebuild the workflow as a clean diagram in Figma — the stages and gates matter more than the specific UI.",
+      //     },
+      //   ],
+      // },
       {
         heading: "Airtable as Operational Infrastructure",
         body: "Designed and maintained the Airtable base that became the team's operational system of record. This wasn't filling in a template — it meant structuring the database schema, building cross-table relationships, creating filtered views for each stakeholder group (design, production, retail), and setting up automations to surface blockers before they hit the critical path.",
         photos: [
           {
-            src: "/images/cases/netflix/airtable-schema.png",
+            src: "/images/vendor.png",
             alt: "Airtable database schema and cross-table relationships",
             caption:
               "The Airtable schema: linked tables for Vendors, Products, Timeline Milestones, and Blockers — with role-specific filtered views so each team saw only what was relevant to them.",
             suggestion:
-              "📸 PHOTO SUGGESTION: This is your most important technical artifact from this role. Show: (1) the schema view with linked fields between tables, (2) a filtered view tailored to one stakeholder group, and (3) ideally the automation setup screen. Two or three screenshots stitched together in Figma works well. This proves you built infrastructure, not just used a tool.",
+              "",
           },
-          {
-            src: "/images/cases/netflix/airtable-automations.png",
-            alt: "Airtable automation setup for blocker surfacing",
-            caption:
-              "Automation rules: status changes triggered Slack notifications to the relevant team lead — ensuring blockers were visible within hours, not days.",
-            suggestion:
-              "📸 PHOTO SUGGESTION: Screenshot of your Airtable automations panel showing a trigger-action setup. Even one well-configured automation (e.g. 'When Status = Blocked → Notify [team lead]') demonstrates systems thinking that most PMs can't show evidence of.",
-          },
+          // {
+          //   src: "/images/vendor.png",
+          //   alt: "Airtable automation setup for blocker surfacing",
+          //   caption:
+          //     "Automation rules: status changes triggered Slack notifications to the relevant team lead — ensuring blockers were visible within hours, not days.",
+          //   suggestion:
+          //     "📸 PHOTO SUGGESTION: Screenshot of your Airtable automations panel showing a trigger-action setup. Even one well-configured automation (e.g. 'When Status = Blocked → Notify [team lead]') demonstrates systems thinking that most PMs can't show evidence of.",
+          // },
         ],
       },
       {
@@ -184,12 +180,12 @@ export const cases: CaseStudy[] = [
         body: "Built a shared timeline view giving each team visibility into upstream dependencies — design approvals blocking production starts, production completion blocking retail setup. This made the critical path legible to non-technical stakeholders without requiring them to understand the underlying data model.",
         photos: [
           {
-            src: "/images/cases/netflix/timeline-view.png",
+            src: "/images/vendor tracker.png",
             alt: "Cross-functional timeline view showing dependencies",
             caption:
-              "The Gantt-style timeline view in Airtable — 8 vendor workstreams visible in a single view, with dependency relationships surfacing which delays would cascade.",
+              "8 vendor workstreams visible in a single view, with dependency relationships surfacing which delays would cascade.",
             suggestion:
-              "📸 PHOTO SUGGESTION: The Airtable timeline/Gantt view showing multiple vendor records as parallel bars converging on a hard launch date. Blur vendor names. Add a small annotation showing one dependency relationship (arrow from one bar to another). This is the executive-facing artifact that justified the system's value.",
+              "",
           },
         ],
       },
@@ -200,7 +196,7 @@ export const cases: CaseStudy[] = [
     ],
   },
   {
-    slug: "equityzen-research-program",
+    slug: "equityzen-mark-to-market",
     emoji: "📈",
     title: "EquityZen UX Research Program",
     subtitle: "Fintech · UX Research · Stakeholder Alignment",

@@ -3,7 +3,7 @@ import { ProcessImage } from '@/components/ProcessImage';
 const IS_DEV = process.env.NODE_ENV === 'development';
 
 export const metadata = {
-  title: 'Personal — Clarence Boone',
+  title: 'Personal — Khalîl Boone',
 };
 
 const PHOTOS = [
@@ -84,12 +84,12 @@ export default function PersonalPage() {
         <div className="about-block">
           <div className="about-icon">✏️</div>
           <div className="about-label">Started in</div>
-          <div className="about-value">Design — which taught me to always start with the person using the thing</div>
+          <div className="about-value">Design — which taught me to always start with the user in mind</div>
         </div>
         <div className="about-block">
           <div className="about-icon">🤖</div>
           <div className="about-label">Currently obsessed with</div>
-          <div className="about-value">Building AI products that replace hours of manual work with seconds of insight</div>
+          <div className="about-value">Building AI products for fashion brands that help streamline the product development process</div>
         </div>
       </div>
     </div>

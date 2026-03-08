@@ -11,7 +11,7 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const p = projects.find((x) => x.slug === params.slug);
-  return { title: p ? `${p.title} — Clarence Boone` : 'Project' };
+  return { title: p ? `${p.title} — Khalîl Boone` : 'Project' };
 }
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
@@ -64,7 +64,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
         <div className="info-block">
           <div className="info-label">Stack</div>
-          <div className="info-value">Firebase, React, GPT-4 Vision</div>
+          <div className="info-value">Firebase, React, GPT-4 Vision, Python, SQL</div>
         </div>
       </div>
 

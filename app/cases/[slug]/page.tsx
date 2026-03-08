@@ -13,7 +13,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const c = cases.find((x) => x.slug === params.slug);
   return {
-    title: c ? `${c.title} — Clarence Boone` : 'Case Study',
+    title: c ? `${c.title} — Khalîl Boone` : 'Case Study',
   };
 }
 
@@ -76,7 +76,27 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
       ))}
 
       <hr className="divider" />
-      <Link href="/cases" className="article-back">← Back to Case Studies</Link>
+
+      {/* Pagination */}
+      {(() => {
+        const idx = cases.findIndex((x) => x.slug === c.slug);
+        const prev = cases[idx - 1];
+        const next = cases[idx + 1];
+        return (
+          <div className="case-pagination">
+            {prev ? (
+              <Link href={`/cases/${prev.slug}`} className="case-pagination-link">
+                ← {prev.title}
+              </Link>
+            ) : <div />}
+            {next ? (
+              <Link href={`/cases/${next.slug}`} className="case-pagination-link">
+                {next.title} →
+              </Link>
+            ) : <div />}
+          </div>
+        );
+      })()}
     </div>
   );
 }

@@ -392,6 +392,36 @@ html, body {
   color: var(--text);
 }
 
+.case-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.case-pagination-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.1s, background 0.1s, border-color 0.1s;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(82, 156, 202, 0.2);
+  background: rgba(82, 156, 202, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.case-pagination-link:hover {
+  color: var(--text);
+  background: rgba(82, 156, 202, 0.12);
+  border-color: rgba(82, 156, 202, 0.35);
+}
+
 .article-title {
   font-size: 30px;
   font-weight: 700;
@@ -725,9 +755,67 @@ html, body {
 .process-photo img {
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
 }
+.process-photo-img {
+  cursor: zoom-in;
+}
+
 .process-photo img:hover {
   transform: scale(1.015);
   box-shadow: 0 8px 32px rgba(0,0,0,0.11);
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  cursor: zoom-out;
+}
+
+.lightbox-container {
+  position: relative;
+  display: inline-flex;
+  cursor: default;
+}
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 92vh;
+  border-radius: 10px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.lightbox-close:hover {
+  background: rgba(0, 0, 0, 0.75);
 }
 
 /* Photo placeholder shimmer */
