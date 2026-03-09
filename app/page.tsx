@@ -116,7 +116,7 @@ export default function HomePage() {
       <div className="section-label">Explore</div>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         <Link href="/cases" className="quick-link">📋 Case Studies</Link>
-        <Link href="/teardowns" className="quick-link">🔍 Product Teardowns</Link>
+        {/* <Link href="/teardowns" className="quick-link">🔍 Product Teardowns</Link> */}
         <Link href="/projects" className="quick-link">🛠️ Projects</Link>
       </div>
 
