@@ -522,22 +522,32 @@ html, body {
 
 /* Quick links */
 .quick-link {
-  background: var(--tag);
-  color: var(--tag-text);
-  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--accent);
+  border: 0.75px solid var(--accent);
   padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 13px;
   text-decoration: none;
-  transition: background 0.1s, border-color 0.1s;
-  display: inline-block;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quick-link::after {
+  content: '→';
 }
 
 .quick-link:hover {
-  background: var(--hover);
+  background: var(--accent-bg);
   border-color: var(--accent);
-  color: var(--text);
+  color: var(--accent);
+}
+
+.dark .quick-link {
+  background: var(--card-bg);
 }
 
 /* Currently building card */

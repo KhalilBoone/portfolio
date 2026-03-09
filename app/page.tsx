@@ -43,7 +43,7 @@ export default function HomePage() {
     <div className="content">
       <div className="page-emoji">👋</div>
       <h1 className="page-title">Khalîl Boone</h1>
-      <p className="page-subtitle">Technical Product Manager · UX Strategy · Fintech · Fashion Tech</p>
+      <p className="page-subtitle">Technical Product Manager · UX Strategy · Fintech · Fashion Tech · Consumer</p>
 
       <div className="callout">
         <span>💡</span>
@@ -91,7 +91,7 @@ export default function HomePage() {
       <div className="section-label">Currently Building</div>
       <Link href="/projects/ai-tech-pack-generator" className="card">
         <div className="card-header">
-          <div className="card-title"><span>🤖</span> AI Tech Pack Generator</div>
+          <div className="card-title"><span>🤖</span> AI Product Developer</div>
           <span className="status-badge" style={{ color: '#f59e0b', background: '#f59e0b22' }}>In Progress</span>
         </div>
         <div className="card-subtitle" style={{ marginTop: '4px' }}>Personal Project · In Progress</div>
@@ -128,10 +128,10 @@ export default function HomePage() {
       </p>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         <a href="mailto:khalil.i.boone@gmail.com" className="contact-btn">
-          ✉ khalil.i.boone@gmail.com
+          Let's Connect
         </a>
         <a href="https://linkedin.com/in/khalilboone" target="_blank" rel="noopener noreferrer" className="contact-btn">
-          in LinkedIn ↗
+          LinkedIn ↗
         </a>
       </div>
     </div>
