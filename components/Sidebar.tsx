@@ -37,6 +37,7 @@ export function Sidebar({ collapsed, mobileOpen, onToggle }: { collapsed: boolea
               key={item.href}
               href={item.href}
               className={`nav-item ${isActive ? 'active' : ''}`}
+              onClick={() => { if (mobileOpen) onToggle(); }}
             >
               <span className="nav-icon">{item.icon}</span>
               <span>{item.label}</span>
