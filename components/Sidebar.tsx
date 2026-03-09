@@ -7,7 +7,7 @@ import { useTheme } from './ThemeProvider';
 const navItems = [
   { href: '/', icon: '🏠', label: 'Home' },
   { href: '/cases', icon: '📋', label: 'Case Studies' },
-  { href: '/teardowns', icon: '🔍', label: 'Product Teardowns' },
+  // { href: '/teardowns', icon: '🔍', label: 'Product Teardowns' },
   { href: '/projects', icon: '🛠️', label: 'Projects' },
   { href: '/personal', icon: '🏡', label: 'Personal' },
 ];
