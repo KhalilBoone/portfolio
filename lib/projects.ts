@@ -31,9 +31,9 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "ai-tech-pack-generator",
+    slug: "ai-product-developer",
     emoji: "🤖",
-    title: "AI Tech Pack Generator",
+    title: "AI Product Developer",
     subtitle: "AI Product · Personal Project · In Progress",
     tags: ["AI / ML", "Computer Vision", "Fashion Tech", "Firebase", "React"],
     status: "In Progress",
@@ -42,12 +42,12 @@ export const projects: Project[] = [
     role: "Solo — Product, Design, Engineering",
     stack: "Firebase, React, GPT-4 Vision, Python, SQL",
     preview:
-      "An AI-powered system that generates garment technical specifications from a single product image — replacing a manual, error-prone process that costs fashion brands dozens of hours per style.",
+      "An AI-powered system that generates garment technical specifications from a single product image, replacing a manual, error-prone process that costs fashion brands dozens of hours per style.",
     coverPhoto: {
       src: "/images/homepage.png",
-      alt: "AI Tech Pack Generator interface",
+      alt: "AI Product Developer interface",
       caption:
-        "The Tech Pack Generator — upload a garment image, receive a fully structured technical specification document in seconds.",
+        "Amenity allows users to upload a garment image, receive a fully structured technical specification document in seconds.",
       suggestion:
         "",
     },
