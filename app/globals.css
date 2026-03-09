@@ -718,12 +718,7 @@ html, body {
 
 /* Tags */
 .tag {
-  transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease;
-}
-.tags-row .tag:hover {
-  background: var(--accent-bg);
-  color: var(--accent);
-  transform: translateY(-1px);
+  pointer-events: none;
 }
 
 /* Quick links */

@@ -35,7 +35,7 @@ export function Topbar({ emoji, section, onToggleSidebar }: TopbarProps) {
           Resume <span className="arrow-circle">↓</span>
         </a>
         <a href="mailto:khalil.i.boone@gmail.com" className="topbar-btn-secondary">
-          ✉ Email Me
+          Email Me
         </a>
         {/* <button onClick={toggle} className="icon-btn" aria-label="Toggle theme">
           {theme === 'light' ? '🌙' : '☀️'}

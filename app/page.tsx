@@ -89,7 +89,7 @@ export default function HomePage() {
       <hr className="divider" />
 
       <div className="section-label">Currently Building</div>
-      <Link href="/projects/ai-tech-pack-generator" className="card">
+      <Link href="/projects/ai-product-developer" className="card">
         <div className="card-header">
           <div className="card-title"><span>🤖</span> AI Product Developer</div>
           <span className="status-badge" style={{ color: '#f59e0b', background: '#f59e0b22' }}>In Progress</span>
