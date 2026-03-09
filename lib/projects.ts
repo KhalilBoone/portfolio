@@ -44,12 +44,12 @@ export const projects: Project[] = [
     preview:
       "An AI-powered system that generates garment technical specifications from a single product image — replacing a manual, error-prone process that costs fashion brands dozens of hours per style.",
     coverPhoto: {
-      src: "/images/projects/techpack/cover.png",
+      src: "/images/homepage.png",
       alt: "AI Tech Pack Generator interface",
       caption:
         "The Tech Pack Generator — upload a garment image, receive a fully structured technical specification document in seconds.",
       suggestion:
-        "📸 PHOTO SUGGESTION: A side-by-side screenshot: left side shows the image upload UI with a garment photo dropped in; right side shows the generated tech pack document output. This single image tells the entire product story. If the app isn't fully built yet, mock this in Figma — a realistic-looking before/after is more compelling than a placeholder.",
+        "",
     },
     sections: [],
   },
