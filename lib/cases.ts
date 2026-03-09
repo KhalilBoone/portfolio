@@ -196,9 +196,9 @@ export const cases: CaseStudy[] = [
     ],
   },
   {
-    slug: "equityzen-mark-to-market",
+    slug: "equityzen-investor-marketplace",
     emoji: "📈",
-    title: "EquityZen UX Research Program",
+    title: "EquityZen Investor Marketplace",
     subtitle: "Fintech · UX Research · Stakeholder Alignment",
     tags: ["Fintech", "Research", "B2B"],
     status: "Published",
@@ -206,12 +206,12 @@ export const cases: CaseStudy[] = [
     preview:
       "Launched a structured UX research program at a fintech investment platform — turning user interviews into product decisions that aligned Sales, Engineering, and Product leadership.",
     coverPhoto: {
-      src: "/images/cases/equityzen/cover.png",
-      alt: "EquityZen research repository in Notion",
+      src: "/images/ez_thumbnail.png",
+      alt: "EquityZen research repository in MixPanel",
       caption:
-        "The research repository in Notion — insights tagged by theme, linked to evidence, and mapped to open product questions. Accessible to all of Product, Design, and Engineering.",
+        "The research repository in MixPanel — insights tagged by theme, linked to evidence, and mapped to open product questions. Accessible to all of Product, Design, and Engineering.",
       suggestion:
-        "📸 PHOTO SUGGESTION: Screenshot of your Notion research repository. Show the structure: a database with columns for Insight, Theme, Evidence, and Product Impact. If it's well-organized, this cover shot immediately signals research maturity. Blur any user names or confidential data.",
+        "",
     },
     sections: [
       {
@@ -219,12 +219,12 @@ export const cases: CaseStudy[] = [
         body: "EquityZen's internal tools were built reactively with no user research foundation. Product, Sales, and Engineering each held different — and often conflicting — assumptions about user needs, leading to misaligned priorities and repeated rework.",
         photos: [
           {
-            src: "/images/cases/equityzen/assumption-map.png",
-            alt: "Team assumption mapping exercise",
+            src: "/images/ez_dashboard.png",
+            alt: "Feature building exercise",
             caption:
-              "An assumption mapping session before research began — surfacing the conflicting beliefs each team held about Sales team user behavior.",
+              "We began building features to help increase deal flow while tailoring investment recommenedations to the user, surfacing the conflicting beliefs each team held about user behavior.",
             suggestion:
-              "📸 PHOTO SUGGESTION: FigJam or Miro screenshot of an assumption mapping exercise. Three columns: 'What we believe', 'Confidence level', 'How we'd test it'. Alternatively, a photo of sticky notes on a wall from a real session. Shows you diagnosed the real problem before jumping to research.",
+              "",
           },
         ],
       },
@@ -233,20 +233,20 @@ export const cases: CaseStudy[] = [
         body: "I established a structured research cadence: bi-weekly moderated user interviews, task-based usability tests on prototypes, and async prototype feedback sessions with power users in the Sales and Deals team.",
         photos: [
           {
-            src: "/images/cases/equityzen/interview-guide.png",
+            src: "/images/ez_flow-maps.png",
             alt: "User interview discussion guide",
             caption:
               "An excerpt from the interview discussion guide — structured around mental models and workflows, not feature preferences.",
             suggestion:
-              "📸 PHOTO SUGGESTION: Screenshot of your Notion interview guide. Show the structure: opening context-setting questions, core task-based questions, and closing probes. Redact any confidential specifics. A well-crafted discussion guide is rare to see in portfolios — it demonstrates research craft.",
+              "",
           },
           {
-            src: "/images/cases/equityzen/affinity-map.png",
+            src: "/images/ez_affinity-map.png",
             alt: "Affinity mapping of research findings",
             caption:
               "Post-interview affinity mapping — 80+ observations from 12 interviews clustered into 6 actionable insight themes.",
             suggestion:
-              "📸 PHOTO SUGGESTION: FigJam screenshot of an affinity map with color-coded sticky notes grouped into clusters. Each cluster should have a theme label. Zoom out slightly so the full map is visible, then zoom in to show one cluster in detail. Two screenshots side by side works well here.",
+              "",
           },
         ],
       },
@@ -255,12 +255,12 @@ export const cases: CaseStudy[] = [
         body: "Each research cycle fed directly into sprint planning. I created a living insight repository in Notion — tagged by theme, linked to supporting quotes, and connected to open product questions. Findings stopped living in research docs that nobody read.",
         photos: [
           {
-            src: "/images/cases/equityzen/insight-to-feature.png",
+            src: "/images/ez_final-designs.png",
             alt: "Research insights mapped to shipped features",
             caption:
               "The insight-to-feature chain: research observation → validated insight → product decision → shipped feature. Closing this loop is what made the research program stick.",
             suggestion:
-              "📸 PHOTO SUGGESTION: Build a simple flow diagram in Figma (or screenshot a Notion table) showing 3–4 examples of: Research Finding → Decision Made → Feature Shipped. E.g., 'Users couldn't find deal status' → 'Moved status to top of deal card' → 'Shipped in Sprint 14'. This is the proof that research moved the product.",
+              "",
           },
         ],
       },
