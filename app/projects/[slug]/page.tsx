@@ -64,7 +64,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
         <div className="info-block">
           <div className="info-label">Stack</div>
-          <div className="info-value">Firebase, React, GPT-4 Vision, Python, SQL</div>
+          <div className="info-value">{p.stack ?? 'Coming Soon'}</div>
         </div>
       </div>
 

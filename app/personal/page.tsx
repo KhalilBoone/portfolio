@@ -8,28 +8,52 @@ export const metadata = {
 
 const PHOTOS = [
   {
-    src: '/images/personal/family-1.jpg',
-    alt: 'Family photo',
-    caption: '',
-    suggestion: '📸 Add a favorite family photo here — outdoors, at home, or at an event. Candid works better than posed.',
+    src: '/images/SA.jpg',
+    alt: 'Table Mountain',
+    caption: 'I climbed Table Mountain',
+    suggestion: '',
   },
   {
-    src: '/images/personal/family-2.jpg',
-    alt: 'Family photo',
-    caption: '',
-    suggestion: '📸 A moment with your kids or partner — something that shows your world outside of work.',
+    src: '/images/IMG_3783.jpeg',
+    alt: 'Biking',
+    caption: 'First time on a tandem bike',
+    suggestion: '',
   },
   {
-    src: '/images/personal/family-3.jpg',
-    alt: 'Family photo',
-    caption: '',
-    suggestion: '📸 A trip, a celebration, or a regular Tuesday. The specificity is what makes it feel real.',
+    src: '/images/IMG_0081.jpeg',
+    alt: 'Elephant ride',
+    caption: 'Riding elephants in Bali',
+    suggestion: '',
   },
   {
-    src: '/images/personal/family-4.jpg',
-    alt: 'Family photo',
-    caption: '',
-    suggestion: '📸 Something that shows what you care about — a hobby, a place, a person.',
+    src: '/images/IMG_0415.jpeg',
+    alt: 'Coding Class',
+    caption: 'Teaching a Saturday coding class',
+    suggestion: '',
+  },
+  {
+    src: '/images/oxford.JPG',
+    alt: 'Green Oxford',
+    caption: 'Oxford by my brand, Khalil Idris',
+    suggestion: '',
+  },
+  {
+    src: '/images/single_monk.jpg',
+    alt: 'Yellow Single Monk',
+    caption: 'Single Monk by my brand, Khalil Idris',
+    suggestion: '',
+  },
+  {
+    src: '/images/IMG_2598.jpeg',
+    alt: 'Infinity Room',
+    caption: 'Yayoi Kusama\'s Infinity Room',
+    suggestion: '',
+  },
+  {
+    src: '/images/IMG_2589.jpeg',
+    alt: 'Yayoi Kusama',
+    caption: 'Yayoi Kusuma\'s Pumpkin',
+    suggestion: '',
   },
 ];
 
@@ -43,8 +67,7 @@ export default function PersonalPage() {
       <div className="callout">
         <span>❤️</span>
         <span>
-          I believe the best product work comes from people with full lives — people who build
-          things because they care about the humans who use them. This is a little of what that
+          I believe it's important to find your sense of purpose in life and to be driven by a WHY. This is a little of what that
           looks like for me.
         </span>
       </div>
