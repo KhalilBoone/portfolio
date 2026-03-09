@@ -36,10 +36,11 @@ export const projects: Project[] = [
     title: "AI Tech Pack Generator",
     subtitle: "AI Product · Personal Project · In Progress",
     tags: ["AI / ML", "Computer Vision", "Fashion Tech", "Firebase", "React"],
-    status: "Coming Soon",
-    statusColor: "#9b9a97",
-    timeline: "Coming Soon",
-    role: "Coming Soon",
+    status: "In Progress",
+    statusColor: "#f59e0b",
+    timeline: "Jan 2025 – Present",
+    role: "Solo — Product, Design, Engineering",
+    stack: "Firebase, React, GPT-4 Vision, Python, SQL",
     preview:
       "An AI-powered system that generates garment technical specifications from a single product image — replacing a manual, error-prone process that costs fashion brands dozens of hours per style.",
     coverPhoto: {
