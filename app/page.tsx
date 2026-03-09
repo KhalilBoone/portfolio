@@ -123,14 +123,17 @@ export default function HomePage() {
       <hr className="divider" />
 
       <div className="section-label">Contact</div>
-      <p style={{ fontSize: '13.5px', color: 'var(--muted)', lineHeight: '1.7' }}>
-        Open to Technical PM roles in fintech, consumer, and AI-powered product environments.{' '}
-        <a href="mailto:khalil.i.boone@gmail.com" style={{ color: 'var(--accent)', textDecoration: 'none' }}>
-          khalil.i.boone@gmail.com
-        </a>{' '}·{' '}
-        <a href="https://linkedin.com/in/khalilboone" target="_blank" rel="noopener noreferrer"
-          style={{ color: 'var(--accent)', textDecoration: 'none' }}>LinkedIn</a>
+      <p style={{ fontSize: '13.5px', color: 'var(--muted)', lineHeight: '1.7', marginBottom: '16px' }}>
+        Open to Technical PM roles in fintech, consumer, and AI-powered product environments.
       </p>
+      <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+        <a href="mailto:khalil.i.boone@gmail.com" className="contact-btn">
+          ✉ khalil.i.boone@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/khalilboone" target="_blank" rel="noopener noreferrer" className="contact-btn">
+          in LinkedIn ↗
+        </a>
+      </div>
     </div>
   );
 }

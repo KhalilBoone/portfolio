@@ -16,17 +16,26 @@ function getTopbarMeta(pathname: string): { emoji: string; section: string } {
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
   const [collapsed, setCollapsed] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const { emoji, section } = getTopbarMeta(pathname);
 
+  const handleToggle = () => {
+    setCollapsed((c) => !c);
+    setMobileOpen((o) => !o);
+  };
+
   return (
     <div className="layout">
-      <Sidebar collapsed={collapsed} onToggle={() => setCollapsed((c) => !c)} />
+      {mobileOpen && (
+        <div className="sidebar-backdrop" onClick={handleToggle} />
+      )}
+      <Sidebar collapsed={collapsed} mobileOpen={mobileOpen} onToggle={handleToggle} />
       <div className="main-scroll">
         <Topbar
           emoji={emoji}
           section={section}
-          onToggleSidebar={() => setCollapsed((c) => !c)}
+          onToggleSidebar={handleToggle}
         />
         {children}
       </div>

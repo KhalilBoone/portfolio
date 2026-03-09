@@ -12,12 +12,12 @@ const navItems = [
   { href: '/personal', icon: '🏡', label: 'Personal' },
 ];
 
-export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle: () => void }) {
+export function Sidebar({ collapsed, mobileOpen, onToggle }: { collapsed: boolean; mobileOpen: boolean; onToggle: () => void }) {
   const pathname = usePathname();
   const { theme, toggle } = useTheme();
 
   return (
-    <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
+    <div className={`sidebar ${collapsed ? 'collapsed' : ''} ${mobileOpen ? 'mobile-open' : ''}`}>
       <div className="sidebar-inner">
         {/* Workspace header */}
         <div className="workspace-row">
