@@ -43,7 +43,7 @@ export default function HomePage() {
     <div className="content">
       <div className="page-emoji">👋</div>
       <h1 className="page-title">Khalîl Boone</h1>
-      <p className="page-subtitle">Technical Product Manager · UX Strategy · Fintech · Fashion Tech · Consumer</p>
+      <p className="page-subtitle">Technical Product Manager · UX Strategy · AI · Fintech · Fashion Tech · Consumer</p>
 
       <div className="callout">
         <span>💡</span>

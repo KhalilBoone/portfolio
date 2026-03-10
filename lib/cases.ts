@@ -206,10 +206,10 @@ export const cases: CaseStudy[] = [
     preview:
       "Launched a structured UX research program at a fintech investment platform — turning user interviews into product decisions that aligned Sales, Engineering, and Product leadership.",
     coverPhoto: {
-      src: "/images/ez_thumbnail.png",
+      src: "/images/ez_dashboard.png",
       alt: "EquityZen research repository in MixPanel",
       caption:
-        "The research repository in MixPanel — insights tagged by theme, linked to evidence, and mapped to open product questions. Accessible to all of Product, Design, and Engineering.",
+        " We began building features to help increase deal flow while tailoring investment recommenedations to the user, surfacing the conflicting beliefs each team held about user behavior. (Adjusted for confidentiality)",
       suggestion:
         "",
     },
@@ -219,10 +219,10 @@ export const cases: CaseStudy[] = [
         body: "EquityZen's internal tools were built reactively with no user research foundation. Product, Sales, and Engineering each held different — and often conflicting — assumptions about user needs, leading to misaligned priorities and repeated rework.",
         photos: [
           {
-            src: "/images/ez_dashboard.png",
+            src: "/images/research.png",
             alt: "Feature building exercise",
             caption:
-              "We began building features to help increase deal flow while tailoring investment recommenedations to the user, surfacing the conflicting beliefs each team held about user behavior.",
+              "The research repository in MixPanel. Insights are tagged by theme, linked to evidence, and mapped to open product questions. (Adjusted for confidentiality)",
             suggestion:
               "",
           },
@@ -236,7 +236,7 @@ export const cases: CaseStudy[] = [
             src: "/images/ez_flow-maps.png",
             alt: "User interview discussion guide",
             caption:
-              "An excerpt from the interview discussion guide — structured around mental models and workflows, not feature preferences.",
+              "Built flowmaps and user personas after conducting our user interviews. The new workflows were structured around mental models and not feature preferences. (Adjusted for confidentiality)",
             suggestion:
               "",
           },
@@ -244,7 +244,7 @@ export const cases: CaseStudy[] = [
             src: "/images/ez_affinity-map.png",
             alt: "Affinity mapping of research findings",
             caption:
-              "Post-interview affinity mapping — 80+ observations from 12 interviews clustered into 6 actionable insight themes.",
+              "Post-interview affinity mapping, 80+ observations from 12 interviews clustered into 6 actionable insight themes. (Adjusted for confidentiality)",
             suggestion:
               "",
           },
@@ -258,7 +258,7 @@ export const cases: CaseStudy[] = [
             src: "/images/ez_final-designs.png",
             alt: "Research insights mapped to shipped features",
             caption:
-              "The insight-to-feature chain: research observation → validated insight → product decision → shipped feature. Closing this loop is what made the research program stick.",
+              "The insight-to-feature chain: research observation → validated insight → product decision → shipped feature. Closing this loop is what made the research program stick. (Adjusted for confidentiality)",
             suggestion:
               "",
           },
@@ -266,7 +266,7 @@ export const cases: CaseStudy[] = [
       },
       {
         heading: "Outcome",
-        body: "Research insights directly shaped product direction for the platform. Complex internal tools shipped for the Sales and Deals team, improving deal workflow efficiency. The research program became a permanent fixture in the product development cycle.",
+        body: "Research insights directly shaped product direction for the platform. Complex internal tools shipped for the Sales and Deals team, improving dealflow efficiency. Each research method became a permanent fixture in the product development cycle.",
       },
     ],
   },
