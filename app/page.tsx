@@ -133,6 +133,9 @@ export default function HomePage() {
         <a href="https://linkedin.com/in/khalilboone" target="_blank" rel="noopener noreferrer" className="contact-btn">
           LinkedIn ↗
         </a>
+        <a href="https://github.com/KhalilBoone/" target="_blank" rel="noopener noreferrer" className="contact-btn">
+          Github ↗
+        </a>
       </div>
     </div>
   );
