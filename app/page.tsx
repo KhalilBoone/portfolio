@@ -6,35 +6,35 @@ const CAREER_HIGHLIGHTS = [
     role: 'Senior UX Strategist',
     period: '2025–Present',
     badge: true,
-    quote: 'Defined product strategy and information architecture for Neuberger Berman and Stellex Capital — leading stakeholder interviews, sitemaps, wireframes, and content architecture to align complex financial products with user needs.',
+    quote: 'Owned the end-to-end design process: scoping projects, defining workflows, designing detailed interactions and visuals, and ensuring quality implementation for Neuberger Berman, Stellex Capital & AIP.',
   },
-  {
+    {
     company: 'Blackstone',
-    role: 'Senior Product Owner',
+    role: 'Senior Product Designer',
     period: '2023–2025',
     badge: false,
-    quote: 'Led design systems implementation across 41 product websites, reducing design iteration cycles by 30% and aligning 3 design teams with engineering and product leadership. This included the creation of a design system library, component library, and design system documentation.',
+    quote: 'Established a scalable design system ensuring visual and interaction consistency across BX.com and Private Wealth Solutions.',
   },
   {
     company: 'Netflix',
     role: 'Product Development Specialist',
     period: '2021–2023',
     badge: false,
-    quote: 'Owned end-to-end product lifecycle for licensed consumer products tied to Netflix\'s highest-grossing IP (Stranger Things, Squid Games, Bridgerton & The Witcher). Managed vendor relationships, production timelines, and cross-functional alignment across marketing and manufacturing, delivering products on schedule against consumer demand signals.',
+    quote: 'Oversaw the Production & PD process from development to order placement through delivery for Netflix Power titles (Stranger Things, The Witcher, and Squid Game).',
   },
   {
     company: 'EquityZen',
-    role: 'Product Owner',
+    role: 'Product Designer',
     period: '2021–2023',
     badge: false,
-    quote: 'Launched UX research program that directly shaped product direction for accredited investors in the secondary market. Ultimately, driving an additional 250k+ subscribers and $40M in revenue.'
+    quote: 'Designed data-rich dashboards and AI-informed interfaces for equity transactions, improving task efficiency by 40%. Ultimately, driving an additional 250k+ subscribers and $40M in revenue.',
   },
   {
     company: 'Publicis Groupe',
     role: 'UX Designer',
     period: '2020–2021',
     badge: false,
-    quote: 'Improved patient engagement metrics by 58% across 5 AbbVie brands in partnership with PMs and engineers.',
+    quote: 'Delivered wireframes and sitemaps for 5 AbbVie brands, improving patient engagement metrics by 58%.',
   },
 ];
 
@@ -43,12 +43,12 @@ export default function HomePage() {
     <div className="content">
       <div className="page-emoji">👋</div>
       <h1 className="page-title">Khalîl Boone</h1>
-      <p className="page-subtitle">Technical Product Manager · UX Strategy · AI · Fintech · Fashion Tech · Consumer</p>
+      <p className="page-subtitle">Senior Product Designer · UX Strategy · AI · Fintech · Fashion Tech · Consumer</p>
 
       <div className="callout">
         <span>💡</span>
         <span>
-          Senior Product Owner with 7+ years translating complex user needs into product decisions across
+          Senior Product Designer with 7+ years translating complex user needs into product decisions across
           fintech, financial services, enterprise SaaS and consumer platforms. I have a deep background in UX strategy, design
           systems, and stakeholder alignment with hands-on technical fluency (React, Vercel, Firebase, Supabase, Python, R, SQL and
           AI integrations) that closes the gap between product vision and engineering execution.
@@ -124,7 +124,7 @@ export default function HomePage() {
 
       <div className="section-label">Contact</div>
       <p style={{ fontSize: '13.5px', color: 'var(--muted)', lineHeight: '1.7', marginBottom: '16px' }}>
-        Open to Technical PM roles in fintech, consumer, and AI-powered product environments.
+        Open to Senior & Staff Product Design roles in fintech, consumer, and AI-powered product environments.
       </p>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         <a href="mailto:khalil.i.boone@gmail.com" className="contact-btn">

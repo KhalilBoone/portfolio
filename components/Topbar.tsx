@@ -31,7 +31,7 @@ export function Topbar({ emoji, section, onToggleSidebar }: TopbarProps) {
         <span>{section}</span>
       </div>
       <div className="topbar-actions">
-        <a href="/Khalil_Boone_Resume.pdf" target="_blank" rel="noopener noreferrer" className="topbar-btn-primary">
+        <a href="/Khalîl (Clarence) Boone Resume.pdf" target="_blank" rel="noopener noreferrer" className="topbar-btn-primary">
           Resume <span className="arrow-circle">↓</span>
         </a>
         <a href="mailto:khalil.i.boone@gmail.com" className="topbar-btn-secondary">
