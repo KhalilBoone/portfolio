@@ -1,4 +1,5 @@
 import { ProcessImage } from '@/components/ProcessImage';
+import { IconBuildings, IconGraduationCap, IconPencil, IconRobot, IconHeart } from '@/components/Icons';
 
 const IS_DEV = process.env.NODE_ENV === 'development';
 
@@ -46,28 +47,64 @@ const PHOTOS = [
   {
     src: '/images/IMG_2598.jpeg',
     alt: 'Infinity Room',
-    caption: 'Yayoi Kusama\'s Infinity Room',
+    caption: "Yayoi Kusama's Infinity Room",
     suggestion: '',
   },
   {
     src: '/images/IMG_2589.jpeg',
     alt: 'Yayoi Kusama',
-    caption: 'Yayoi Kusuma\'s Pumpkin',
+    caption: "Yayoi Kusama's Pumpkin",
     suggestion: '',
+  },
+];
+
+const ABOUT_BLOCKS = [
+  {
+    icon: <IconBuildings size={20} />,
+    label: 'Based in',
+    value: 'Montclair, NJ — NYC Metro',
+  },
+  {
+    icon: <IconGraduationCap size={20} />,
+    label: 'Education',
+    value: 'B.S. Computer Science & Marketing · NJIT',
+  },
+  {
+    icon: <IconPencil size={20} />,
+    label: 'Started in',
+    value: 'Design — which taught me to always start with the user in mind',
+  },
+  {
+    icon: <IconRobot size={20} />,
+    label: 'Currently obsessed with',
+    value: 'Building AI products for fashion brands that help streamline the product development process',
   },
 ];
 
 export default function PersonalPage() {
   return (
     <div className="content">
-      <div className="page-emoji">🏡</div>
       <h1 className="page-title">Personal</h1>
       <p className="page-subtitle">The person behind the portfolio.</p>
 
-      <div className="callout">
-        <span>❤️</span>
+      <div style={{
+        display: 'flex',
+        alignItems: 'flex-start',
+        gap: '12px',
+        background: 'var(--card-bg)',
+        border: '1px solid var(--border)',
+        borderRadius: '10px',
+        padding: '16px 20px',
+        marginBottom: '32px',
+        fontSize: '13.5px',
+        color: 'var(--muted)',
+        lineHeight: '1.65',
+      }}>
+        <span style={{ color: 'var(--accent)', flexShrink: 0, marginTop: '2px' }}>
+          <IconHeart size={18} />
+        </span>
         <span>
-          I believe it's important to find your sense of purpose in life and to be driven by a WHY. This is a little of what that
+          I believe it&apos;s important to find your sense of purpose in life and to be driven by a WHY. This is a little of what that
           looks like for me.
         </span>
       </div>
@@ -94,26 +131,13 @@ export default function PersonalPage() {
 
       <div className="section-label">A few things about me</div>
       <div className="about-grid">
-        <div className="about-block">
-          <div className="about-icon">🏙️</div>
-          <div className="about-label">Based in</div>
-          <div className="about-value">Montclair, NJ — NYC Metro</div>
-        </div>
-        <div className="about-block">
-          <div className="about-icon">🎓</div>
-          <div className="about-label">Education</div>
-          <div className="about-value">B.S. Computer Science &amp; Marketing · NJIT</div>
-        </div>
-        <div className="about-block">
-          <div className="about-icon">✏️</div>
-          <div className="about-label">Started in</div>
-          <div className="about-value">Design — which taught me to always start with the user in mind</div>
-        </div>
-        <div className="about-block">
-          <div className="about-icon">🤖</div>
-          <div className="about-label">Currently obsessed with</div>
-          <div className="about-value">Building AI products for fashion brands that help streamline the product development process</div>
-        </div>
+        {ABOUT_BLOCKS.map((block) => (
+          <div key={block.label} className="about-block">
+            <div className="about-icon" style={{ color: 'var(--accent)' }}>{block.icon}</div>
+            <div className="about-label">{block.label}</div>
+            <div className="about-value">{block.value}</div>
+          </div>
+        ))}
       </div>
     </div>
   );

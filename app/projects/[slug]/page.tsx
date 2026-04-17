@@ -21,17 +21,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   return (
     <div className="content">
       <Link href="/projects" className="article-back animate-fade-up">
-        ← Back to Projects
+        ← Projects
       </Link>
 
       {/* Header */}
-      <div className="animate-fade-up" style={{ animationDelay: '40ms', fontSize: '44px', marginBottom: '12px', lineHeight: 1 }}>
-        {p.emoji}
-      </div>
-      <h1 className="article-title animate-fade-up" style={{ animationDelay: '80ms' }}>
+      <h1 className="article-title animate-fade-up" style={{ animationDelay: '60ms' }}>
         {p.title}
       </h1>
-      <div className="article-meta animate-fade-up" style={{ animationDelay: '120ms' }}>
+      <div className="article-meta animate-fade-up" style={{ animationDelay: '100ms' }}>
         <span>{p.timeline}</span>
         <span>·</span>
         <span>{p.role}</span>
@@ -42,14 +39,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           {p.status}
         </span>
       </div>
-      <div className="tags-row animate-fade-up" style={{ animationDelay: '160ms' }}>
+      <div className="tags-row animate-fade-up" style={{ animationDelay: '140ms' }}>
         {p.tags.map((tag) => (
           <span key={tag} className="tag">{tag}</span>
         ))}
       </div>
 
       {/* Project meta grid */}
-      <div className="info-grid animate-fade-up" style={{ animationDelay: '200ms', marginTop: '24px' }}>
+      <div className="info-grid animate-fade-up" style={{ animationDelay: '180ms', marginTop: '24px' }}>
         <div className="info-block">
           <div className="info-label">Timeline</div>
           <div className="info-value">{p.timeline}</div>
@@ -71,7 +68,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <hr className="divider" />
 
       {/* Cover photo */}
-      <div className="animate-fade-up" style={{ animationDelay: '240ms' }}>
+      <div className="animate-fade-up" style={{ animationDelay: '220ms' }}>
         <ProcessImage
           src={p.coverPhoto.src}
           alt={p.coverPhoto.alt}
@@ -86,7 +83,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div
           key={section.heading}
           className="article-section animate-fade-up"
-          style={{ animationDelay: `${280 + i * 60}ms` }}
+          style={{ animationDelay: `${260 + i * 60}ms` }}
         >
           <h2 className="article-heading">{section.heading}</h2>
           <p className="article-body">{section.body}</p>
@@ -104,7 +101,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       ))}
 
       <hr className="divider" />
-      <Link href="/projects" className="article-back">← Back to Projects</Link>
+      <Link href="/projects" className="article-back">← Projects</Link>
     </div>
   );
 }

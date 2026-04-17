@@ -1,20 +1,38 @@
 import Link from 'next/link';
 import { projects } from '@/lib/projects';
+import { IconWrench } from '@/components/Icons';
 
 export default function ProjectsPage() {
   return (
     <div className="content">
-      <div className="page-emoji animate-fade-up">🛠️</div>
-      <h1 className="page-title animate-fade-up" style={{ animationDelay: '60ms' }}>Projects</h1>
-      <p className="page-subtitle animate-fade-up" style={{ animationDelay: '120ms' }}>
+      <h1 className="page-title animate-fade-up">Projects</h1>
+      <p className="page-subtitle animate-fade-up" style={{ animationDelay: '60ms' }}>
         Things I'm building — documented as products, not just side projects.
       </p>
 
-      <div className="callout animate-fade-up" style={{ animationDelay: '160ms' }}>
-        <span>🔬</span>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: '12px',
+          background: 'var(--card-bg)',
+          border: '1px solid var(--border)',
+          borderRadius: '10px',
+          padding: '16px 20px',
+          marginBottom: '32px',
+          fontSize: '13.5px',
+          color: 'var(--muted)',
+          lineHeight: '1.65',
+          animationDelay: '120ms',
+        }}
+        className="animate-fade-up"
+      >
+        <span style={{ color: 'var(--accent)', flexShrink: 0, marginTop: '2px' }}>
+          <IconWrench size={18} />
+        </span>
         <span>
           Each project is documented with full product thinking: the problem, architecture
-          decisions, key tradeoffs, and what's next. Process photos included.
+          decisions, key tradeoffs, and what&apos;s next. Process photos included.
         </span>
       </div>
 
@@ -31,7 +49,6 @@ export default function ProjectsPage() {
         >
           <div className="card-header">
             <div className="card-title">
-              <span>{p.emoji}</span>
               {p.title}
             </div>
             <span

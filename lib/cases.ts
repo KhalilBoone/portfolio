@@ -5,10 +5,17 @@ export type ProcessPhoto = {
   suggestion: string; // shown in dev as placeholder instructions
 };
 
+export type DeviceViewerConfig = {
+  desktopSrc: string;
+  mobileSrc: string;
+  alt: string;
+};
+
 export type CaseSection = {
   heading: string;
   body: string;
   photos?: ProcessPhoto[];
+  deviceViewer?: DeviceViewerConfig;
 };
 
 export type CaseStudy = {
@@ -20,7 +27,7 @@ export type CaseStudy = {
   status: string;
   statusColor: string;
   preview: string;
-  coverPhoto: ProcessPhoto;
+  coverPhoto?: ProcessPhoto;
   sections: CaseSection[];
 };
 
@@ -267,6 +274,62 @@ export const cases: CaseStudy[] = [
       {
         heading: "Outcome",
         body: "Research insights directly shaped product direction for the platform. Complex internal tools shipped for the Sales and Deals team, improving dealflow efficiency. Each research method became a permanent fixture in the product development cycle.",
+      },
+    ],
+  },
+  {
+    slug: "prosek-financial-ux",
+    emoji: "",
+    title: "Financial Services UX Strategy",
+    subtitle: "Prosek Partners · Neuberger Berman · Stellex Capital · AIP",
+    tags: ["Financial Services", "UX Strategy", "Interaction Design"],
+    status: "Current",
+    statusColor: "#0F2D52",
+    preview:
+      "Owning end-to-end UX strategy and interaction design for three financial services clients — scoping projects, defining information architecture, designing detailed interactions, and ensuring quality implementation across digital products for institutional investors.",
+    sections: [
+      {
+        heading: "Discovery",
+        body: "Every engagement begins with a structured discovery phase — stakeholder interviews, content audits, and competitive analysis. For Neuberger Berman, this meant mapping the full corporate site architecture across all investor segments and product lines before a single wireframe was drawn. The sitemap below represents the output of that discovery: a comprehensive IA defining 30+ page templates, navigational hierarchy, and the logic governing IP-based content personalization for regional audiences.",
+        photos: [
+          {
+            src: "/images/nb_sitemap.png",
+            alt: "Neuberger Berman corporate site information architecture",
+            caption:
+              "Full site architecture for neubergereberman.com — mapping all page types, navigational hierarchy, and content relationships across the corporate investor experience.",
+            suggestion: "",
+          },
+        ],
+      },
+      {
+        heading: "Neuberger Berman",
+        body: "Designing investor-facing digital experiences for one of the largest independent asset managers. Work spans information architecture, data presentation design, and interaction patterns for complex financial products — with particular attention to how institutional investors consume and act on portfolio data.",
+      },
+      {
+        heading: "Interaction Design",
+        body: "With the architecture defined, work moves into detailed interaction design — wireframes, annotated flows, and component-level specs handed off directly to engineering. Every screen is pressure-tested against real user workflows before moving to high-fidelity, ensuring implementation review catches edge cases rather than structural issues.",
+        photos: [
+          {
+            src: "/images/wireframes.png",
+            alt: "Wireframes and interaction design for financial services clients",
+            caption:
+              "Mid-fidelity wireframes documenting page structure, component hierarchy, and interaction states — annotated for engineering handoff.",
+            suggestion: "",
+          },
+        ],
+      },
+      {
+        heading: "Approach",
+        body: "Financial services design demands a different discipline than consumer product work. The bar for information density, precision, and regulatory compliance is significantly higher. My process starts with deep stakeholder interviews, maps to existing mental models in the domain, and tests against actual workflows before any pixels are finalized.",
+      },
+      {
+        heading: "Implementation",
+        body: "Final designs are reviewed against live implementation to ensure fidelity — checking spacing, interaction behavior, responsive breakpoints, and accessibility. Below are the shipped Neuberger Berman homepage and What We Do pages across desktop and mobile.",
+        deviceViewer: {
+          desktopSrc: "/images/desktop_home.png",
+          mobileSrc: "/images/mobile_home.png",
+          alt: "Neuberger Berman homepage — desktop and mobile",
+        },
       },
     ],
   },

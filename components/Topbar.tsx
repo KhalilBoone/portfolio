@@ -27,8 +27,7 @@ export function Topbar({ emoji, section, onToggleSidebar }: TopbarProps) {
         <button className="icon-btn" onClick={onToggleSidebar} aria-label="Toggle sidebar">
           ☰
         </button>
-        <span>{emoji}</span>
-        <span>{section}</span>
+        <span style={{ fontWeight: 500, color: 'var(--text)', fontSize: '13px' }}>{section}</span>
       </div>
       <div className="topbar-actions">
         <a href="/Khalîl (Clarence) Boone Resume.pdf" target="_blank" rel="noopener noreferrer" className="topbar-btn-primary">

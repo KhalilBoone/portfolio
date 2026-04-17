@@ -1,142 +1,207 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import { LogoTicker } from '@/components/LogoTicker';
 
-const CAREER_HIGHLIGHTS = [
+const SELECTED_WORK = [
   {
+    slug: 'prosek-financial-ux',
     company: 'Prosek Partners',
-    role: 'Senior UX Strategist',
-    period: '2025–Present',
-    badge: true,
-    quote: 'Owned the end-to-end design process: scoping projects, defining workflows, designing detailed interactions and visuals, and ensuring quality implementation for Neuberger Berman, Stellex Capital & AIP.',
+    title: 'Financial Services UX Strategy',
+    subtitle: 'Neuberger Berman · Stellex Capital',
+    desc: 'Owning end-to-end UX strategy and interaction design for three concurrent financial services clients — scoping, information architecture, detailed interaction design, and implementation review.',
+    thumbnail: '/images/design & collaboration.png',
+    thumbnailBg: '#E8EEF5',
+    tags: ['UX Strategy', 'Fintech', 'Interaction Design'],
+    gallery: [
+      { src: '/images/nb_sitemap.png',   label: 'Discovery',          caption: 'Stakeholder research & IA', chips: ['Research', 'IA'],        thumbPosition: 'top center'  },
+      { src: '/images/wireframes.png',   label: 'Interaction Design', caption: 'Wireframes & flows',        chips: ['Wireframes', 'Flows'],   thumbPosition: 'center'      },
+      { src: '/images/desktop_home.png', label: 'Implementation',     caption: 'Dev handoff & review',      chips: ['Handoff', 'Review'],     thumbPosition: 'top center'  },
+    ],
   },
-    {
+  {
+    slug: 'blackstone-design-system',
     company: 'Blackstone',
-    role: 'Senior Product Designer',
-    period: '2023–2025',
-    badge: false,
-    quote: 'Established a scalable design system ensuring visual and interaction consistency across BX.com and Private Wealth Solutions.',
+    title: 'Blackstone Design System',
+    subtitle: 'Enterprise · Design Systems · Product Strategy',
+    desc: 'Built a scalable design system adopted across 41 enterprise products — token architecture, React component library, and a hub-and-spoke governance model that reduced iteration cycles by 30%.',
+    thumbnail: '/images/bx_guidelines.png',
+    thumbnailBg: '#E8EEF5',
+    tags: ['Design Systems', 'Enterprise', 'React'],
+    gallery: [
+      { src: '/images/bx_guidelines.png',   label: 'Component Library',  caption: 'Tokens & components',     chips: ['Design Systems', 'React']  },
+      { src: '/images/bx_spacing.png',      label: 'Token Architecture', caption: 'Spacing & typography',    chips: ['Tokens', 'Typography']     },
+      { src: '/images/bx_product-pages.png',label: 'Product Sites',      caption: '41 enterprise products',  chips: ['Enterprise', 'UI', 'Web']         },
+    ],
   },
   {
-    company: 'Netflix',
-    role: 'Product Development Specialist',
-    period: '2021–2023',
-    badge: false,
-    quote: 'Oversaw the Production & PD process from development to order placement through delivery for Netflix Power titles (Stranger Things, The Witcher, and Squid Game).',
-  },
-  {
+    slug: 'equityzen-investor-marketplace',
     company: 'EquityZen',
-    role: 'Product Designer',
-    period: '2021–2023',
-    badge: false,
-    quote: 'Designed data-rich dashboards and AI-informed interfaces for equity transactions, improving task efficiency by 40%. Ultimately, driving an additional 250k+ subscribers and $40M in revenue.',
+    title: 'EquityZen Investor Marketplace',
+    subtitle: 'Fintech · Interaction Design · Research',
+    desc: 'Designed data-rich dashboards and AI-informed interfaces for private equity transactions — launched structured UX research program that directly shaped product direction.',
+    thumbnail: '/images/ez_dashboard.png',
+    thumbnailBg: '#EEF5EE',
+    tags: ['Fintech', 'Data Visualization', 'Research'],
+    gallery: [
+      { src: '/images/ez_dashboard.png',     label: 'Dashboard',     caption: 'Investor overview',       chips: ['Data Viz', 'Fintech']      },
+      { src: '/images/ez_flow-maps.png',     label: 'User Research', caption: 'Flow maps & synthesis',   chips: ['UXR', 'Synthesis']         },
+      { src: '/images/ez_final-designs.png', label: 'Final Designs', caption: 'High-fidelity UI',        chips: ['Interaction', 'UI']        },
+    ],
   },
   {
-    company: 'Publicis Groupe',
-    role: 'UX Designer',
-    period: '2020–2021',
-    badge: false,
-    quote: 'Delivered wireframes and sitemaps for 5 AbbVie brands, improving patient engagement metrics by 58%.',
+    slug: 'netflix-operations-systems',
+    company: 'Netflix',
+    title: 'Netflix Operations & Vendor Systems',
+    subtitle: 'Enterprise SaaS · Systems Design · Operations',
+    desc: 'Architected the operational infrastructure coordinating 8+ vendor relationships across PLM systems — designing the data model, workflow automations, and cross-functional visibility layer.',
+    thumbnail: '/images/overview.png',
+    thumbnailBg: '#F5EEEE',
+    tags: ['Systems Design', 'PLM', 'B2B'],
+    gallery: [
+      { src: '/images/overview.png',        label: 'System of Record', caption: 'Data model & schema',    chips: ['PLM', 'Systems']           },
+      { src: '/images/vendor.png',          label: 'Vendor Schema',    caption: 'Cross-vendor mapping',   chips: ['B2B', 'Schema']            },
+      { src: '/images/vendor tracker.png',  label: 'Timeline View',    caption: 'Workflow automations',   chips: ['Automation', 'Operations'] },
+    ],
   },
+];
+
+const EXPERIENCE = [
+  { company: 'Prosek Partners',  role: 'Senior UX Strategist',          period: '2025–Present', current: true  },
+  { company: 'Blackstone',       role: 'Senior Product Designer',        period: '2023–2025',    current: false },
+  { company: 'EquityZen',        role: 'Product Designer',               period: '2021–2023',    current: false },
+  { company: 'Netflix',          role: 'Product Development Specialist', period: '2021–2023',    current: false },
+  { company: 'Publicis Groupe',  role: 'UX Designer',                    period: '2020–2021',    current: false },
 ];
 
 export default function HomePage() {
   return (
     <div className="content">
-      <div className="page-emoji">👋</div>
-      <h1 className="page-title">Khalîl Boone</h1>
-      <p className="page-subtitle">Senior Product Designer · UX Strategy · AI · Fintech · Fashion Tech · Consumer</p>
 
-      <div className="callout">
-        <span>💡</span>
-        <span>
-          Senior Product Designer with 7+ years translating complex user needs into product decisions across
-          fintech, financial services, enterprise SaaS and consumer platforms. I have a deep background in UX strategy, design
-          systems, and stakeholder alignment with hands-on technical fluency (React, Vercel, Firebase, Supabase, Python, R, SQL and
-          AI integrations) that closes the gap between product vision and engineering execution.
-        </span>
-      </div>
-
-      <hr className="divider" />
-
-      <div className="section-label">Career Highlights</div>
-
-      {/* Prosek — current — full width */}
-      <div className="career-highlight-card career-highlight-current">
-        <div className="ch-header">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span className="ch-company">{CAREER_HIGHLIGHTS[0].company}</span>
-            <span className="ch-badge">Current</span>
-          </div>
-          <span className="ch-period">{CAREER_HIGHLIGHTS[0].period}</span>
-        </div>
-        <div className="ch-role">{CAREER_HIGHLIGHTS[0].role}</div>
-        <p className="ch-quote">&ldquo;{CAREER_HIGHLIGHTS[0].quote}&rdquo;</p>
-      </div>
-
-      {/* Remaining — 2-col grid */}
-      <div className="ch-grid">
-        {CAREER_HIGHLIGHTS.slice(1).map((h) => (
-          <div key={h.company} className="career-highlight-card">
-            <div className="ch-header">
-              <span className="ch-company">{h.company}</span>
-              <span className="ch-period">{h.period}</span>
-            </div>
-            <div className="ch-role">{h.role}</div>
-            <p className="ch-quote">&ldquo;{h.quote}&rdquo;</p>
-          </div>
-        ))}
-      </div>
-
-      <hr className="divider" />
-
-      <div className="section-label">Currently Building</div>
-      <Link href="/projects/ai-product-developer" className="card">
-        <div className="card-header">
-          <div className="card-title"><span>🤖</span> AI Product Developer</div>
-          <span className="status-badge" style={{ color: '#f59e0b', background: '#f59e0b22' }}>In Progress</span>
-        </div>
-        <div className="card-subtitle" style={{ marginTop: '4px' }}>Personal Project · In Progress</div>
-        <p className="card-preview" style={{ marginTop: '8px' }}>
-          An AI-powered system that generates garment technical specifications from images.
-          Independently owning product architecture, UX design, and technical integration across
-          four AI pipelines: image analysis, flat sketch generation, specification generation,
-          and document assembly.
+      {/* ── HERO ─────────────────────────────────── */}
+      <section id="about">
+        <p className="hero-bio-block">
+          Senior Product Designer based in New York. Currently at{' '}
+          <span className="bio-current">Prosek Partners</span>, designing for
+          Neuberger Berman &amp; Stellex Capital. Formerly at{' '}
+          <span className="bio-former">Blackstone · EquityZen · Netflix · Publicis Groupe.</span>{' '}
+          Specializing in interaction design, design systems, and AI-native product
+          development for fintech and financial services.
         </p>
-        <div className="tags-row">
-          <span className="tag">AI / ML</span>
-          <span className="tag">Computer Vision</span>
-          <span className="tag">Fashion Tech</span>
-          <span className="tag">Enterprise SaaS</span>
-          <span className="tag">Firebase</span>
-          <span className="tag">React</span>
+      </section>
+
+      {/* ── LOGO TICKER ──────────────────────────── */}
+      <LogoTicker />
+
+      {/* ── SELECTED WORK ────────────────────────── */}
+      <section id="work" style={{ paddingTop: '80px' }}>
+        <a href="#work" className="section-eyebrow" data-reveal>Selected Works</a>
+
+        <div className="work-grid">
+          {SELECTED_WORK.map((work, i) => (
+            <div key={work.slug} className="work-project-group" data-reveal data-reveal-delay={String(Math.min(i + 1, 4)) as '1' | '2' | '3' | '4'}>
+              {/* ── Company label ── */}
+              <div className="work-project-label">{work.company}</div>
+
+              {/* ── 3 cards ── */}
+              <div className="work-gallery">
+                {work.gallery.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={`/cases/${work.slug}`}
+                    className="work-gallery-item"
+                  >
+                    <div
+                      className="work-gallery-thumb"
+                      style={{ background: work.thumbnailBg, position: 'relative' }}
+                    >
+                      <Image
+                        src={item.src}
+                        alt={item.label}
+                        fill
+                        style={{ objectFit: 'cover', objectPosition: (item as any).thumbPosition ?? 'top center' }}
+                        sizes="(max-width: 768px) 200px, 33vw"
+                      />
+                    </div>
+                    <div className="work-gallery-info">
+                      <div className="work-gallery-text">
+                        <div className="work-gallery-label">{item.label}</div>
+                        <div className="work-gallery-caption">{item.caption}</div>
+                        <div className="work-gallery-chips">
+                          {item.chips.map((chip) => (
+                            <span key={chip} className="work-gallery-chip">{chip}</span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="work-gallery-arrow">→</div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
-      </Link>
+      </section>
 
-      <hr className="divider" />
+      {/* ── EXPERIENCE ───────────────────────────── */}
+      <section id="experience" style={{ paddingTop: '96px' }} data-reveal>
+        <a href="#experience" className="section-eyebrow">Experience</a>
 
-      <div className="section-label">Explore</div>
-      <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-        <Link href="/cases" className="quick-link">📋 Case Studies</Link>
-        {/* <Link href="/teardowns" className="quick-link">🔍 Product Teardowns</Link> */}
-        <Link href="/projects" className="quick-link">🛠️ Projects</Link>
-      </div>
+        <div className="exp-grid">
+          {EXPERIENCE.map((exp, i) => (
+            <div
+              key={exp.company}
+              className="exp-row"
+              data-reveal
+              data-reveal-delay={String(Math.min(i + 1, 4)) as '1' | '2' | '3' | '4'}
+            >
+              <div>
+                <div className="exp-company">
+                  {exp.current && <span className="exp-current-dot" />}
+                  {exp.company}
+                </div>
+                <div className="exp-role">{exp.role}</div>
+              </div>
+              <div className="exp-period">{exp.period}</div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <hr className="divider" />
+      {/* ── CONTACT ──────────────────────────────── */}
+      <section id="contact" style={{ paddingTop: '96px' }} data-reveal>
+        <a href="#contact" className="section-eyebrow">Contact</a>
+        <p style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: '1.7', marginBottom: '20px', maxWidth: '480px' }}>
+          Open to Senior &amp; Staff Product Design roles in fintech, hedge funds,
+          private equity, and AI-powered products.
+        </p>
+        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+          <a href="mailto:khalil.i.boone@gmail.com" className="contact-btn">
+            Let's Connect
+          </a>
+          <a
+            href="https://linkedin.com/in/khalilboone"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-btn"
+          >
+            LinkedIn ↗
+          </a>
+          <a
+            href="https://github.com/KhalilBoone/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-btn"
+          >
+            GitHub ↗
+          </a>
+        </div>
+      </section>
 
-      <div className="section-label">Contact</div>
-      <p style={{ fontSize: '13.5px', color: 'var(--muted)', lineHeight: '1.7', marginBottom: '16px' }}>
-        Open to Senior & Staff Product Design roles in fintech, consumer, and AI-powered product environments.
-      </p>
-      <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-        <a href="mailto:khalil.i.boone@gmail.com" className="contact-btn">
-          Let's Connect
-        </a>
-        <a href="https://linkedin.com/in/khalilboone" target="_blank" rel="noopener noreferrer" className="contact-btn">
-          LinkedIn ↗
-        </a>
-        <a href="https://github.com/KhalilBoone/" target="_blank" rel="noopener noreferrer" className="contact-btn">
-          Github ↗
-        </a>
-      </div>
+      {/* ── FOOTER ───────────────────────────────── */}
+      <footer className="site-footer">
+        © Khalil Boone Design 2026
+      </footer>
+
     </div>
   );
 }

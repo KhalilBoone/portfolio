@@ -1,44 +1,36 @@
 'use client';
 
-import { useState } from 'react';
-import { usePathname } from 'next/navigation';
-import { Sidebar } from '@/components/Sidebar';
-import { Topbar } from '@/components/Topbar';
-
-function getTopbarMeta(pathname: string): { emoji: string; section: string } {
-  if (pathname === '/') return { emoji: '👋', section: 'Home' };
-  if (pathname.startsWith('/cases')) return { emoji: '📋', section: 'Case Studies' };
-  if (pathname.startsWith('/teardowns')) return { emoji: '🔍', section: 'Product Teardowns' };
-  if (pathname.startsWith('/projects')) return { emoji: '🛠️', section: 'Projects' };
-  if (pathname.startsWith('/personal')) return { emoji: '🏡', section: 'Personal' };
-  return { emoji: '📄', section: 'Portfolio' };
-}
+import { useEffect } from 'react';
+import { TopNav } from '@/components/TopNav';
+import { CustomCursor } from '@/components/CustomCursor';
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
-  const [collapsed, setCollapsed] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const pathname = usePathname();
-  const { emoji, section } = getTopbarMeta(pathname);
+  // Scroll-reveal: add 'in-view' when elements enter viewport
+  useEffect(() => {
+    const els = document.querySelectorAll('[data-reveal]');
+    if (!els.length) return;
 
-  const handleToggle = () => {
-    setCollapsed((c) => !c);
-    setMobileOpen((o) => !o);
-  };
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
 
   return (
-    <div className="layout">
-      {mobileOpen && (
-        <div className="sidebar-backdrop" onClick={handleToggle} />
-      )}
-      <Sidebar collapsed={collapsed} mobileOpen={mobileOpen} onToggle={handleToggle} />
-      <div className="main-scroll">
-        <Topbar
-          emoji={emoji}
-          section={section}
-          onToggleSidebar={handleToggle}
-        />
-        {children}
-      </div>
-    </div>
+    <>
+      <CustomCursor />
+      <TopNav />
+      <main className="main-content">{children}</main>
+    </>
   );
 }
