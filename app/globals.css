@@ -138,6 +138,8 @@ body.cursor-custom * { cursor: none !important; }
 .main-content {
   min-height: 100vh;
   padding-top: var(--nav-h);
+  position: relative;
+  z-index: 1;
 }
 
 /* =============================================
@@ -556,10 +558,40 @@ body.cursor-custom * { cursor: none !important; }
 /* =============================================
    CONTENT WRAPPER
    ============================================= */
+/* =============================================
+   PAGE GLOW — decorative background element
+   ============================================= */
+.page-glow {
+  position: fixed;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 560px;
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    rgba(78, 153, 164, 0.14) 0%,
+    rgba(78, 153, 164, 0.07) 35%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+
+.dark .page-glow {
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    rgba(78, 153, 164, 0.10) 0%,
+    rgba(78, 153, 164, 0.04) 35%,
+    transparent 70%
+  );
+}
+
 .content {
-  max-width: 960px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 80px 48px 140px;
+  padding: 130px 48px 140px;
 }
 
 /* =============================================
@@ -576,10 +608,10 @@ body.cursor-custom * { cursor: none !important; }
 }
 
 .hero-bio-block {
-  font-size: 15px;
+  font-size: 18px;
   color: var(--muted);
   line-height: 1.75;
-  max-width: 560px;
+  max-width: 640px;
   font-weight: 400;
 }
 
@@ -1630,8 +1662,8 @@ button:focus-visible {
   .nav-desktop-ctas { display: none; }
   .nav-hamburger { display: flex; }
 
-  .content { padding: 56px 28px 100px; }
-  .hero-bio-block { font-size: 14px; }
+  .content { padding: 90px 28px 100px; }
+  .hero-bio-block { font-size: 16px; }
   /* Case study collapses to single column */
   .case-layout {
     grid-template-columns: 1fr;
@@ -1642,8 +1674,8 @@ button:focus-visible {
 }
 
 @media (max-width: 640px) {
-  .content { padding: 44px 20px 80px; }
-  .hero-bio-block { font-size: 13px; }
+  .content { padding: 72px 20px 80px; }
+  .hero-bio-block { font-size: 15px; }
   .work-card-title { font-size: 19px; }
   .info-grid { grid-template-columns: 1fr; }
   .photo-grid { grid-template-columns: 1fr; }
@@ -1720,5 +1752,5 @@ button:focus-visible {
 @media (max-width: 400px) {
   .hero-name { font-size: 32px; }
   .nav-inner { padding: 0 16px; }
-  .content { padding: 36px 16px 72px; }
+  .content { padding: 60px 16px 72px; }
 }

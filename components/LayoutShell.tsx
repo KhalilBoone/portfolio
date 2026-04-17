@@ -28,6 +28,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
+      <div className="page-glow" aria-hidden="true" />
       <CustomCursor />
       <TopNav />
       <main className="main-content">{children}</main>
