@@ -281,12 +281,18 @@ export const cases: CaseStudy[] = [
     slug: "prosek-financial-ux",
     emoji: "",
     title: "Financial Services UX Strategy",
-    subtitle: "Prosek Partners · Neuberger Berman · Stellex Capital · AIP",
+    subtitle: "Prosek Partners · Neuberger Berman · Stellex Capital",
     tags: ["Financial Services", "UX Strategy", "Interaction Design"],
     status: "Current",
     statusColor: "#0F2D52",
     preview:
       "Owning end-to-end UX strategy and interaction design for three financial services clients — scoping projects, defining information architecture, designing detailed interactions, and ensuring quality implementation across digital products for institutional investors.",
+    coverPhoto: {
+      src: "/images/nb_sitemap.png",
+      alt: "Neuberger Berman site information architecture",
+      caption: "Full site architecture for neubergereberman.com — mapping all page types, navigational hierarchy, and content relationships across the corporate investor experience.",
+      suggestion: "",
+    },
     sections: [
       {
         heading: "Discovery",
