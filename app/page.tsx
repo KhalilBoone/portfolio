@@ -80,9 +80,10 @@ export default function HomePage() {
       {/* ── HERO ─────────────────────────────────── */}
       <section id="about">
         <p className="hero-bio-block">
-          Senior Product Designer based in New York. Currently at{' '}
-          <span className="bio-current">Prosek Partners</span>, designing for
-          Neuberger Berman &amp; Stellex Capital. Formerly at{' '}
+          Senior Product Designer based in New York. Currently building{' '}
+          <span className="bio-current">Amenity AI</span>, developing 
+          for Hedge Fund and Private Equity firms like Neuberger Berman &amp; Stellex Capital. 
+          Formerly at{' '}
           <span className="bio-former">Blackstone · EquityZen · Netflix · Publicis Groupe.</span>{' '}
           Specializing in interaction design, design systems, and AI-native product
           development for fintech and financial services.
